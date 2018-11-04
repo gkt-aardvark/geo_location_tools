@@ -12,6 +12,10 @@ import simplekml
 import chardet
 from django.utils.encoding import smart_str, smart_unicode
 
+#these two lines will be required in the future - can't use default user agent anymore
+from geopy.geocoders import options
+options.default_user_agent = "your_user_agent_name"
+
 
 geolocator = Nominatim()
 
